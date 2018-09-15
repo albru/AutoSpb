@@ -1,0 +1,46 @@
+@import "../misc/functions";
+@import "../misc/media";
+@import "../misc/mixins";
+@import "../misc/variables";
+
+.header-wrap {
+  min-height: 650px;
+}
+
+.header {
+  padding: 0;
+  &-container {
+    background-color: $black;
+  }
+  &-logo {
+    color:$white;
+    font-family: $rob;
+    font-size: $logo;
+  }
+  &-socials {
+    border-right: 1px solid $gray;
+    &-icon {
+      color: $white;
+    }
+    &-icon:hover {
+      color: $orange;
+    }
+    &__item {
+      display: inline-block;
+      margin-right: rem(15px);
+    }
+  }
+  &-worktime {
+    color: $white;
+    border-right: 2px solid $gray;
+    &__item {
+      padding: $padding10;
+    }
+  }
+  &-phone {
+    color: $white;
+    font-family: 'russo', Helvetica, sans-serif;
+    padding: $padding10;
+  }
+}
+    

@@ -1,0 +1,74 @@
+
+@import "../misc/functions";
+@import "../misc/media";
+@import "../misc/mixins";
+@import "../misc/variables";
+
+.header-second {
+  background-image: url("../img/background-min.jpg");
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  &__title {
+    padding: 35px;
+    font-family: $rob;
+    color: $white;
+  }
+  &__btn {
+    padding: $padding10;
+    background-color: $orange;
+    &:hover {
+      background-color: lighten($orange, 8%);
+    }
+  }
+  &__btn-cont {
+    padding: 25px;
+    color: $white;
+  }
+  &__container--right {
+  padding: 0;
+  background-color: $blackT;
+  }
+  &__form {
+    text-transform: uppercase;
+    padding: rem(40px);
+    color: $white;
+    background-color: $blackTT;
+    border-radius: rem(10px);
+    &--legend {
+      margin-bottom: $margin15;
+    }
+    &--lbl {
+      white-space: nowrap;
+      position: relative;
+      &:after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        content: '';
+        width: 70%;
+        height: 2px;
+        background-color: $white;
+      }
+    }
+    &--btn {
+      background-color: $orange;
+      color: $white;
+      text-transform: uppercase;
+      font-family: $rob;
+      margin: $margin10;
+      cursor: pointer;
+      &:hover {
+        background-color: darken($orange, 8%);
+      }
+    }
+  }
+  &__input--text:focus {
+    outline: none;
+    border: 1px solid $orange;
+  }
+}
+
