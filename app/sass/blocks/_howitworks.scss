@@ -28,6 +28,8 @@
       color: $white;
       font-family: $rob;
       padding: $padding15;
+      margin-top: $margin15;
+      text-transform: uppercase;
     }
     &__tab {
       border-radius: initial;
@@ -57,8 +59,6 @@
         left: 5%;
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
-
-
       }
     }
   }
