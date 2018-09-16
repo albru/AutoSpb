@@ -1,0 +1,25 @@
+
+@import "../misc/variables";
+@import "../misc/functions";
+@import "../misc/mixins";
+@import "../misc/media";
+
+.features {
+  &-title {
+    color: $white;
+    padding: $padding15;
+  }
+  &-cont {
+    background: linear-gradient(110deg, $orange 50%, $black 50%);
+    min-height: 650px;
+  }
+  &-left {
+  background-color: $orange;
+  position: relative;
+    &__img {
+      position: absolute;
+      top: 50%;
+      left: -50%;
+    }
+  }
+}

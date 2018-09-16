@@ -1,0 +1,65 @@
+@import "../misc/variables";
+@import "../misc/functions";
+@import "../misc/mixins";
+@import "../misc/media";
+
+.main-wrap {
+  min-height: 650px;
+  overflow: hidden;
+}
+
+.howitworks {
+  &-cont {
+    min-height: 650px;
+  }
+  &-left {
+    position: relative;
+    min-height: 650px;
+    &__img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &-right {
+      color: $white;
+      padding: $padding15;
+    &__title {
+      color: $white;
+      font-family: $rob;
+      padding: $padding15;
+    }
+    &__tab {
+      border-radius: initial;
+      background-color: $white;
+      position: relative;
+      border: none;
+      color: $black;
+      margin-bottom: $margin25;
+      cursor: pointer;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 20%;
+        background-color: $orange;
+        clip-path: polygon(0 0, 100% 0%, 66% 100%, 0% 100%);
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: rem(10px);
+        height: rem(10px);
+        border-right: 3px solid $white;
+        border-bottom: 3px solid $white;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+
+
+      }
+    }
+  }
+}

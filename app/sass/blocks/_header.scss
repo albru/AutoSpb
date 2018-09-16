@@ -5,10 +5,13 @@
 
 .header-wrap {
   min-height: 650px;
+  overflow: hidden;
+  margin-top: 100px;
 }
 
 .header {
   padding: 0;
+
   &-container {
     background-color: $black;
   }
@@ -18,7 +21,17 @@
     font-size: $logo;
   }
   &-socials {
-    border-right: 1px solid $gray;
+    position: relative;
+    &:after {
+      content:'';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: rem(2px);
+      height: rem(15px);
+      background-color: $gray;
+    }
     &-icon {
       color: $white;
     }
@@ -32,7 +45,17 @@
   }
   &-worktime {
     color: $white;
-    border-right: 2px solid $gray;
+    position: relative;
+    &:after {
+      content:'';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: rem(2px);
+      height: rem(15px);
+      background-color: $gray;
+    }
     &__item {
       padding: $padding10;
     }
