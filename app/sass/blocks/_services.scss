@@ -1,0 +1,26 @@
+
+@import "../misc/variables";
+@import "../misc/functions";
+@import "../misc/mixins";
+@import "../misc/media";
+
+.ourworks {
+  &-cont {
+    min-height: 650px;
+  }
+}
+
+.card {
+  position: relative;
+}
+
+.card-text {
+  padding: $padding15;
+}
+
+.ss {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform:translateX(-50%);
+}
