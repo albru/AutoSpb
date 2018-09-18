@@ -15,6 +15,21 @@
     padding: $padding15;
     margin: $margin15;
   }
+  
+&-card {
+  position: relative;
+  padding: $padding10;
+  transition: all .4s;
+  will-change: transform;
+    &:hover {
+      transform: scale(1.05);
+      border: 2px solid $orange;
+    }
+    &__title {
+      margin-top: $margin15;
+      margin-bottom: 0;
+    }
+  }
   &-btn {
     color: $white;
     font-family: $rob;
@@ -34,16 +49,6 @@
 }
 
 
-.card {
-  position: relative;
-  padding: $padding10;
-  transition: all .4s;
-  will-change: transform;
-  &:hover {
-    transform: scale(1.05);
-    border: 2px solid $orange;
-  }
-}
 
 .card-text {
   padding: $padding15;

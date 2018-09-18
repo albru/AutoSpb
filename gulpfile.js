@@ -65,8 +65,7 @@ const src = {
     'node_modules/@fortawesome/fontawesome-free/css/all.css'
   ],
   jsLibsTake: [
-    'node_modules/jquery/dist/jquery.js',
-    'app/libs/jslibs/jquery.easytabs.js'
+    'node_modules/jquery/dist/jquery.js'
   ],
 
   svgPut: 'app/img/sprites/',

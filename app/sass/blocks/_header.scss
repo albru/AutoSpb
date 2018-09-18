@@ -11,9 +11,9 @@
 
 .header {
   padding: 0;
-
   &-container {
     background-color: $black;
+    border-bottom: 1px solid $white;
   }
   &-logo {
     color:$white;

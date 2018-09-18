@@ -1,0 +1,53 @@
+@import "../misc/variables";
+@import "../misc/functions";
+@import "../misc/mixins";
+@import "../misc/media";
+
+
+.ourcustomers {
+  min-height: 350px;
+  color: $white;
+  background-color: $orange;
+  &-title {
+    font-family: $rob;
+    text-transform: uppercase;
+    padding: $padding10;
+  }
+  &-slider {
+    overflow: hidden;
+    width: 700px;
+    &__cont{
+      border: 3px solid $white;
+      border-radius: rem(5px);
+      padding: $padding15;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+  }
+  &-arrow {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border-left: 10px solid $white;
+    border-top: 10px solid $white;
+    border-right: none;
+    border-bottom: none;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+  &-arrow__left {
+    transform: rotate(-45deg);
+  }
+  &-arrow__right {
+    transform: rotate(135deg);
+  }
+  &-items {
+    position: relative;
+  }
+  &-item {
+    width: 700px;
+  }
+}
+
+
