@@ -44,10 +44,15 @@
   }
   &-items {
     position: relative;
+    will-change: right;
+    transition: right .6s;
   }
   &-item {
     width: 700px;
   }
 }
 
-
+.ss {
+  margin: 0;
+  padding: 0;
+}
