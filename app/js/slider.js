@@ -10,8 +10,6 @@ let slider = (function () {
     let currentRight = 0;
 
     items.style.right = currentRight;
-    left.style.opacity = .5;
-    left.style.cursor = 'initial';
     
     right.onclick = () => {
       if (currentRight < maxRight) {
@@ -21,7 +19,7 @@ let slider = (function () {
         left.style.cursor = 'pointer';
       }
       if (currentRight === maxRight) {
-        right.style.opacity = .5;
+        right.style.opacity = .2;
         right.style.cursor = 'initial';
       }
     }
@@ -33,7 +31,7 @@ let slider = (function () {
         right.style.cursor = 'pointer';
       }
       if (currentRight === minRight) {
-        left.style.opacity = .5;
+        left.style.opacity = .2;
         left.style.cursor = 'initial';
       }
     }

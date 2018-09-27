@@ -61,11 +61,11 @@ const src = {
   ],
   cssLibsTake: [
     'node_modules/normalize.css/normalize.css', 
-    'node_modules/bootstrap/dist/css/bootstrap.css',
-    'node_modules/@fortawesome/fontawesome-free/css/all.css'
+    'node_modules/bootstrap/dist/css/bootstrap.css'
   ],
   jsLibsTake: [
-    'node_modules/jquery/dist/jquery.js'
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/bootstrap/js/bootstrap.js'
   ],
 
   svgPut: 'app/img/sprites/',

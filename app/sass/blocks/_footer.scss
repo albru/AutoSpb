@@ -1,0 +1,76 @@
+@import "../misc/variables";
+@import "../misc/functions";
+@import "../misc/mixins";
+@import "../misc/media";
+
+.footer {
+  color: $gray;
+
+  &-cont {
+    min-height: 325px;
+    background-image: url('../img/footer-min.jpg');
+    background-size: cover;
+    background-position: center center;
+    border-top: 1px solid $white;
+  }
+  &-logo {
+
+  }
+  &-section-title {
+    font-family: 'russo', Helvetica, sans-serif;
+    padding: $padding10;
+  }
+  &-section-desc {
+    padding: $padding10;
+  }
+  &-info {
+    padding: $padding10;
+    &__item {
+      &-link {
+        color: $gray;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+  &-contacts {
+    &__item {
+      &-link {
+      
+      }
+    }
+    &__phone {
+        margin-right: $margin10;
+        margin-bottom: $margin10;
+        color: $white;
+        font-size: rem(25px);
+        color: $white;
+        font-family: 'russo', Helvetica, sans-serif;
+        padding: $padding10;
+        transition: all .3s;
+        &:hover {
+          text-decoration: none;
+          color: $orange;
+        }
+        &:hover > .whatsapp {
+          color: $orange;
+        }
+        &:focus {
+          color: $orange;
+          text-decoration: none;
+        }
+    }
+  }
+  &-socials-icon {
+    margin: 0 $margin10;
+    color: $white;
+    transition: all .3s;
+    &:hover {
+      text-decoration: none;
+      color: $orange;
+    }
+  }
+}

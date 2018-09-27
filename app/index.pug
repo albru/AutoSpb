@@ -12,13 +12,14 @@ html(lang="en")
     .wrapper
       header.header-wrap
         include pug/blocks/header
-        include pug/blocks/header-second
       main.main-wrap
+        include pug/blocks/greetings
         include pug/blocks/howitworks
         include pug/blocks/features
         include pug/blocks/services
         include pug/blocks/ourcustomers
-      footer
+      footer.footer
+        include pug/blocks/footer
   script(src="js/libs.min.js") 
   script(src="js/bundle.js")
  

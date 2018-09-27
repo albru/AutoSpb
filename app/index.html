@@ -21,14 +21,14 @@
                   <div class="row">
                     <div class="header-socials col-lg-4 d-flex justify-content-end align-items-center">
                       <ul class="header-socials__list">
-                        <li class="header-socials__item"> <a class="header-socials__link" href="#"><i class="header-socials-icon vk fa fa-vk fa-1x"></i></a></li>
-                        <li class="header-socials__item"> <a class="header-socials__link" href="#"><i class="header-socials-icon inst fa fa-instagram fa-1x"> </i></a></li>
+                        <li class="header-socials__item"> <a class="header-socials__link" href="#"><i class="header-socials-icon fa fa-vk fa-1.5x"></i></a></li>
+                        <li class="header-socials__item"> <a class="header-socials__link" href="#"><i class="header-socials-icon fa fa-instagram fa-1.5x"> </i></a></li>
                       </ul>
                     </div>
                     <div class="header-worktime col-lg-4 d-flex justify-content-center align-items-center"><i class="clock fa fa-clock fa-1x"></i>
                       <div class="header-worktime__item">Время работы - С 08 до 20</div>
                     </div>
-                    <div class="header-phone col-lg-4 d-flex justify-content-start align-items-center">+7 (981) 755 41 01</div>
+                    <div class="header-phone-cont col-lg-4 d-flex justify-content-start align-items-center"> <a class="header-phone" href="tel:+79817554101">+7 (981) 755 41 01<i class="header-socials-icon whatsapp fa fa-whatsapp fa-1x"></i></a></div>
                   </div>
                 </div>
               </div>
@@ -50,6 +50,8 @@
             </div>
           </div>
         </div>
+      </header>
+      <main class="main-wrap">
         <div class="container-fluid header-second header-second__container">
           <div class="row header-second__row">
             <div class="col-lg-6 header-second__container--left">
@@ -99,8 +101,6 @@
             </div>
           </div>
         </div>
-      </header>
-      <main class="main-wrap">
         <div class="container-fluid howitworks-cont">
           <div class="row">
             <div class="col-lg-12 text-center">
@@ -167,7 +167,7 @@
           </div>
         </div>
         <div class="container-fluid ourcustomers">
-          <div class="container">
+          <div class="container d-flex flex-column justify-content-between">
             <div class="row">
               <div class="col-lg-12 text-center ourcustomers-title">
                 <h2>Наши клиенты</h2>
@@ -189,7 +189,33 @@
           </div>
         </div>
       </main>
-      <footer></footer>
+      <footer class="footer">
+        <div class="container-fluid footer-cont d-flex justify-content-center align-items-center"> 
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-2"> <a>Пушка Подбор</a></div>
+            <div class="col-lg-4 footer-logo d-flex flex-column justify-content-start align-items-center">
+              <h3 class="align-self-start footer-section-title">О компании</h3>
+              <p class="footer-section-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates nisi aperiam numquam magnam consequatur, veritatis, ipsam tenetur laboriosam, minima qui odio nobis. Veniam error enim quod saepe expedita itaque pariatur!</p>
+            </div>
+            <div class="col-lg-2 d-flex flex-column justify-content-start align-items-center"> 
+              <h3 class="align-self-start footer-section-title">Информация</h3>
+              <ul class="footer-info align-self-start">
+                <li class="footer-info__item"> <a class="footer-info__item-link" href="#">На главную</a></li>
+                <li class="footer-info__item"> <a class="footer-info__item-link" href="#">Что мы проверяем?</a></li>
+                <li class="footer-info__item"> <a class="footer-info__item-link" href="#">Как это работает?</a></li>
+                <li class="footer-info__item"> <a class="footer-info__item-link" href="#">Цены</a></li>
+                <li class="footer-info__item"> <a class="footer-info__item-link" href="#">Отзывы</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 d-flex flex-column justify-content-start align-items-center">
+              <h3 class="d-flex justify-items-start footer-section-title">Контакты</h3><a class="footer-contacts__phone" href="tel:+79817554101">+7 (981) 755 41 01<i class="footer-socials-icon whatsapp fa fa-whatsapp fa-1x"></i></a>
+              <ul class="footer-contacts">
+                <li class="footer-contacts__item"><a class="footer-contacts__item-link" href="#"><i class="footer-socials-icon fa fa-vk fa-2x"></i></a><a class="footer-contacts__item-link" href="#"><i class="footer-socials-icon fa fa-instagram fa-2x"> </i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
   <script src="js/libs.min.js"> </script>
