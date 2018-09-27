@@ -8,18 +8,84 @@
   &-title {
     color: $white;
     padding: $padding15;
+    margin: $margin15;
+    font-family: $rob;
+    text-transform: uppercase;
+  }
+  &-img--left {
+    position: absolute;
+    left: -50%;
+    top: 10%;
+    z-index: 15;
+  }
+  &-wrapper {
+    position: relative;
   }
   &-cont {
-    background: linear-gradient(110deg, $orange 50%, $black 50%);
+    background: linear-gradient(90deg, $orange 50%, $black 50%);
     min-height: 650px;
+
   }
   &-left {
   background-color: $orange;
+  min-height: 100%;
   position: relative;
-    &__img {
+  }
+  &-list {
+    width: 80%;
+    margin-left: auto;
+    margin-top: -50px;
+    color: $white;
+    position: relative;
+    &:before {
+      content: '';
       position: absolute;
-      top: 50%;
-      left: -50%;
+      width: 1px;
+      height: 100%;
+      background-color: $white;
+      top: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__item {
+      position: relative;
+      width: 50%;
+      z-index: 1;
+      padding: 0 $padding20;
+      &-icon {
+        background: $orange;
+        position: absolute;
+        &--1 {
+          top: 50%;
+          right: -15%;
+          transform: translateY(-50%);
+        }
+        &--2 {
+          top: 50%;
+          left: -8%;
+          transform: translateY(-50%);
+        }
+        &--3 {
+          top: 50%;
+          right: -13%;
+          transform: translateY(-50%);
+        }
+      }
+      &--1 {
+        margin-right: auto;
+        position: relative;
+      }
+      &--2 {
+        margin-left: auto;
+        position: relative;
+      }
+      &--3 {
+        margin-right: auto;
+        position: relative;
+      }
+    }
+    &__li {
+      
     }
   }
 }

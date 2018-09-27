@@ -1,10 +1,30 @@
 .container-fluid.features-cont
-  .row
-    .col-lg-12.text-center
-      h1.features-title PRIVeT QU
-  .row
-    .col-lg-6.features-left
-      img.img-fluid.features-left__img(src="img/car1-min.png" alt="car 1")
-    .col-lg-6.features-right
+  .container.features-wrapper
+    img.features-img--left(src="img/car1-min.png" alt="car 1")
+    .row
+      .col-lg-12.text-center
+        h2.features-title как работаем?
+      .col-lg-6.features-left 
+        .features-list__cont.d-flex
+          ul.features-list
+            li.features-list__li.d-flex.flex-column
+              .features-list__item.features-list__item--1
+                h2 Заявка или звонок
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. voluptatibus quos 
+                .features-list__item-icon.features-list__item-icon--1
+                  i(class="fa fa-handshake-o fa-3x")
+            li.features-list__li.d-flex.flex-column
+              .features-list__item.features-list__item--2.text-right
+                h2 Поиск авто
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. voluptatibus quos 
+                .features-list__item-icon.features-list__item-icon--2
+                  i(class="fa fa-search fa-3x")
+            li.features-list__li.d-flex.flex-column
+              .features-list__item.features-list__item--3
+                h2 Покупка
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. uptatibus quos 
+                .features-list__item-icon.features-list__item-icon--3
+                  i(class="fa fa-car fa-3x")
+      .col-lg-6.features-right
 
-  
+

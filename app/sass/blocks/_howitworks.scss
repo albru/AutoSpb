@@ -12,12 +12,16 @@
   &-cont {
     min-height: 650px;
   }
+  &-wrap {
+    position: relative;
+  }
   &-left {
     position: relative;
     min-height: 650px;
     &__img {
       position: absolute;
       top: 50%;
+      left: -50%;
       transform: translateY(-50%);
     }
   }
