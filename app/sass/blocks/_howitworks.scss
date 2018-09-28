@@ -66,6 +66,7 @@
         width: 20%;
         background-color: $orange;
         clip-path: polygon(0 0, 100% 0%, 66% 100%, 0% 100%);
+        transition: all .3s;
       }
       &::after {
         content: '';

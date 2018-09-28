@@ -32,6 +32,8 @@
   &__btn-cont {
     padding: 25px;
     color: $white;
+    opacity: 0;
+    transition: all .3s;
   }
   &__container--left {
     min-height: 100%;
