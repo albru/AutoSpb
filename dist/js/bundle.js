@@ -1,1 +1,34 @@
-"use strict";!function(r){var n={};function o(e){if(n[e])return n[e].exports;var t=n[e]={i:e,l:!1,exports:{}};return r[e].call(t.exports,t,t.exports,o),t.l=!0,t.exports}o.m=r,o.c=n,o.d=function(e,t,r){o.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:r})},o.r=function(e){Object.defineProperty(e,"__esModule",{value:!0})},o.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return o.d(t,"a",t),t},o.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},o.p="/build/",o(o.s=1)}([function(e,t,r){var n,o,i,u;n=document.querySelector(".js-slider-left"),o=document.querySelector(".js-slider-right"),i=document.querySelector(".js-slider-items"),u=0,i.style.right=u,o.onclick=function(){u<1400&&(u+=700,i.style.right=u+"px",n.style.opacity=1,n.style.cursor="pointer"),1400===u&&(o.style.opacity=.2,o.style.cursor="initial")},n.onclick=function(){0<u&&(u-=700,i.style.right=u+"px",o.style.opacity=1,o.style.cursor="pointer"),0===u&&(n.style.opacity=.2,n.style.cursor="initial")}},function(e,t,r){var n,o=(n=r(0))&&n.__esModule?n:{default:n};document.addEventListener("DOMContentLoaded",function(e){o.default})}]);
+"use strict";
+
+!function (t) {
+  var e = {};function r(n) {
+    if (e[n]) return e[n].exports;var o = e[n] = { i: n, l: !1, exports: {} };return t[n].call(o.exports, o, o.exports, r), o.l = !0, o.exports;
+  }r.m = t, r.c = e, r.d = function (t, e, n) {
+    r.o(t, e) || Object.defineProperty(t, e, { configurable: !1, enumerable: !0, get: n });
+  }, r.r = function (t) {
+    Object.defineProperty(t, "__esModule", { value: !0 });
+  }, r.n = function (t) {
+    var e = t && t.__esModule ? function () {
+      return t.default;
+    } : function () {
+      return t;
+    };return r.d(e, "a", e), e;
+  }, r.o = function (t, e) {
+    return Object.prototype.hasOwnProperty.call(t, e);
+  }, r.p = "/build/", r(r.s = 1);
+}([function (t, e, r) {
+  "use strict";
+  var n, o, i, u;n = document.querySelector(".js-slider-left"), o = document.querySelector(".js-slider-right"), i = document.querySelector(".js-slider-items"), u = 0, i.style.right = u, o.onclick = function () {
+    u < 1400 && (u += 700, i.style.right = u + "px", n.style.opacity = 1, n.style.cursor = "pointer"), 1400 === u && (o.style.opacity = .2, o.style.cursor = "initial");
+  }, n.onclick = function () {
+    u > 0 && (u -= 700, i.style.right = u + "px", o.style.opacity = 1, o.style.cursor = "pointer"), 0 === u && (n.style.opacity = .2, n.style.cursor = "initial");
+  };
+}, function (t, e, r) {
+  "use strict";
+  var n,
+      o = r(0),
+      i = (n = o) && n.__esModule ? n : { default: n };document.addEventListener("DOMContentLoaded", function (t) {
+    i.default;
+  });
+}]);
+//# sourceMappingURL=bundle.js.map

@@ -4,7 +4,7 @@
 @import "../misc/media";
 
 .main-wrap {
-  min-height: 650px;
+  min-height: 100%;
   overflow: hidden;
 }
 
@@ -17,17 +17,28 @@
   }
   &-left {
     position: relative;
-    min-height: 650px;
+    margin-top: $margin25;
     &__img {
       position: absolute;
-      top: 50%;
+      top: 70%;
       left: -50%;
       transform: translateY(-50%);
+    }
+    &__desc {
+      background-color: $white;
+      color: $black;
+      width: 70%;
+      min-height: 350px;
+      padding: $padding20;
+      border-radius: rem(3px);
     }
   }
   &-right {
       color: $white;
       padding: $padding15;
+    &__cont {
+      position: relative;
+    }
     &__title {
       color: $white;
       font-family: $rob;
@@ -41,7 +52,7 @@
       position: relative;
       border: none;
       color: $black;
-      margin-bottom: $margin25;
+      margin-bottom: $margin10;
       cursor: pointer;
       &::before {
         content: '';
@@ -64,6 +75,15 @@
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
       }
+    }
+    &__line {
+      width: 150px;
+      height: 2px;
+      border: 2px dashed $orange;
+      position: absolute;
+      top: 50%;
+      left: -55%;
+      z-index: 10;
     }
   }
 }

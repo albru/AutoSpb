@@ -135,7 +135,7 @@ gulp.task('scripts', function () {
     .pipe(babel({
       presets: ['env']
     }))
-    // .pipe(concat('script.min.js'))
+    .pipe(concat('script.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest(src.jsDist))
 });
