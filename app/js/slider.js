@@ -1,5 +1,5 @@
 
-let slider = (function () {
+const slider = (function () {
     const left = document.querySelector('.js-slider-left');
     const right = document.querySelector('.js-slider-right');
     const items = document.querySelector('.js-slider-items');

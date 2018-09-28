@@ -13,6 +13,7 @@
 .howitworks {
   &-cont {
     min-height: 650px;
+    position: relative;
   }
   &-wrap {
     position: relative;
@@ -22,8 +23,8 @@
     margin-top: $margin25;
     &__img {
       position: absolute;
-      top: 70%;
-      left: -50%;
+      top: 50%;
+      right: 0;
       transform: translateY(-50%);
     }
     &__desc {
@@ -105,6 +106,9 @@
     left: 5%;
     top: 50%;
     transform: translateY(-50%) rotate(135deg);
+  }
+  &::before {
+    background-color: darken($orange, 8%);
   }
 }
 
