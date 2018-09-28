@@ -3,6 +3,8 @@
 @import "../misc/mixins";
 @import "../misc/media";
 
+// JS STYLES BOTTOM
+
 .main-wrap {
   min-height: 100%;
   overflow: hidden;
@@ -74,6 +76,8 @@
         left: 5%;
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
+        transition: all .3s;
+        will-change: transform;
       }
     }
     &__line {
@@ -84,6 +88,26 @@
       top: 50%;
       left: -55%;
       z-index: 10;
+      transition: all .3s;
+      opacity: 0;
     }
   }
+}
+
+.js-tab-active {
+  &::after {
+    content: '';
+    position: absolute;
+    width: rem(10px);
+    height: rem(10px);
+    border-right: 3px solid $white;
+    border-bottom: 3px solid $white;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+  }
+}
+
+.js-line-active {
+  opacity: 1;
 }

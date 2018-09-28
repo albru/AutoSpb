@@ -6,12 +6,14 @@ let tabs = (function () {
   const linesArr = [];
 
   const desc = [
-    { id: jsDocs, text: 'jsDocs' },
-    { id: jsBody, text: 'jsBody' },
-    { id: jsEngine, text: 'jsEngine' },
-    { id: jsWheel, text: 'jsWheel' },
-    { id: jsBrake, text: 'jsBrake' }
+    { id: 'jsDocs', text: 'jsDocs' },
+    { id: 'jsBody', text: 'jsBody' },
+    { id: 'jsEngine', text: 'jsEngine' },
+    { id: 'jsWheel', text: 'jsWheel' },
+    { id: 'jsBrake', text: 'jsBrake' }
   ]
+
+  textDisplay.innerHTML = desc[0].text;
 
   function createArr (elem, num, target) {
     let arr = Array.from(elem)
@@ -23,11 +25,29 @@ let tabs = (function () {
   createArr(buttons, desc.length - 1, buttonsArr)
   createArr(lines, desc.length - 1, linesArr)
 
-  console.log(buttonsArr)
-
   buttonsArr.forEach(elem => {
     elem.addEventListener('click', function (e) {
-      console.log(e.target.getAttribute('id'))
+      let id = e.target.getAttribute('id');
+      let objId = [...desc].filter(val => val.id === id)
+      let lineId = [...linesArr].filter(val => val.classList.contains(id))
+
+      for (let key in buttonsArr) {
+        buttonsArr[key].classList.remove('js-tab-active')
+      }
+
+      for (let key in linesArr) {
+        linesArr[key].classList.remove('js-line-active')
+      }
+
+      textDisplay.innerHTML = objId[0].text
+
+      e.target.classList.contains('js-tab-active') ? (
+        null
+      ) : (
+        e.target.classList.add('js-tab-active'),
+        lineId[0].classList.add('js-line-active')
+      );
+      
     })
   })
 })()
