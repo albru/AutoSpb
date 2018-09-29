@@ -64,8 +64,7 @@ const src = {
     'node_modules/bootstrap/dist/css/bootstrap.css'
   ],
   jsLibsTake: [
-    'node_modules/jquery/dist/jquery.js',
-    'node_modules/bootstrap/js/bootstrap.js'
+    // 'app/libs/jslibs/lazysizes/lazysizes.js'
   ],
 
   svgPut: 'app/img/sprites/',
@@ -135,18 +134,18 @@ gulp.task('scripts', function () {
     .pipe(babel({
       presets: ['env']
     }))
-    .pipe(concat('script.min.js'))
+    // .pipe(concat('script.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest(src.jsDist))
 });
 
 
-gulp.task('jslibs', function () {
-  return gulp.src(src.jsLibsTake)
-    .pipe(concat('libs.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest(src.jsPut));
-});
+// gulp.task('jslibs', function () {
+//   return gulp.src(src.jsLibsTake)
+//     .pipe(concat('libs.min.js'))
+//     .pipe(uglify())
+//     .pipe(gulp.dest(src.jsPut));
+// });
 
 // WATCH & AUTO UPDATE
 
@@ -167,7 +166,14 @@ gulp.task('browser-sync', function () {
   gulp.watch(src.baseApp + '/js/bundle.js').on('change', browserSync.reload);
 });
 
-gulp.task('watch', gulp.series(['css-libs', 'jslibs', 'browser-sync']), function () {
+// +++++ ADD TO BUILD JSLIBS BELOW!!!
+
+// gulp.task('watch', gulp.series(['css-libs', 'jslibs', 'browser-sync']), function () {
+// });
+
+// +++++ ADD TO BUILD JSLIBS BELOW!!!
+
+gulp.task('watch', gulp.series(['css-libs', 'browser-sync']), function () {
 });
 
 // MINIFY IMGS
@@ -193,7 +199,7 @@ gulp.task('clean', function () {
   });
 });
 
-gulp.task('build', gulp.series('clean', 'html', 'scss', 'jslibs', 'scripts', 'img', function () {
+gulp.task('build', gulp.series('clean', 'html', 'scss', 'scripts', 'img', function () {
   return new Promise(function (resolve) {
     var buildCss = gulp.src(src.cssTake)
       .pipe(gulp.dest(src.cssDist));
