@@ -1,0 +1,18 @@
+.popup-cont
+.popup-wrap
+  .row.col-lg-12.popup-wrap__cont
+    .popup-exit
+      .popup-exit__btn 
+    form.col-xl-12.col-lg-8.col-md-10.col-sm-12.popup__form.text-center
+      fieldset.popup__form--fieldset
+        legend.popup__form--legend Оставьте заявку 
+        .form-group.row
+          label.col-lg-6.col-form-label.popup__form--lbl(for='user-name1') Ваше имя
+          input#user-name1.popup__input--text.col-lg-6.form-control(type='text', value='', placeholder='Имя')
+        .form-group.row
+          label.col-lg-6.col-form-label.popup__form--lbl(for='user-phone1') Ваш телефон
+          input#user-phone1.popup__input--text.col-lg-6.form-control(type='text', value='',placeholder='Телефон')
+        .form-group.row.d-flex.justify-content-center
+          button.btn.popup__form--btn.js-popup-btn Отправить
+
+

@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
   </head>
-  <body>
+  <body class="body">
     <div class="wrapper">
       <header class="header-wrap">
-        <div class="container-fluid header-container fixed-top">
+        <div class="container-fluid header-container">
           <div class="row">
             <div class="header-logo col-lg-3 d-flex justify-content-center align-items-center"> <a class="header-logo-link">Пушка Подбор</a></div>
             <div class="header col-lg-9"> 
@@ -43,7 +43,7 @@
                         <li class="nav-item"><a class="nav-link" href="#services">услуги</a></li>
                         <li class="nav-item"><a class="nav-link" href="#customers">отзывы</a></li>
                       </ul>
-                      <button class="nav-btn btn" type="button">Заказать подбор </button>
+                      <button class="nav-btn btn js-popup-btn" type="button">Заказать подбор </button>
                     </nav>
                   </div>
                 </div>
@@ -203,7 +203,7 @@
               <div class="card-body"><img class="img-fluid" src="img/1car-min.jpg" alt="Разовый выезд"/>
                 <h4 class="card-title text-center ourworks-card__title">Разовый выезд</h4>
                 <p class="card-text">Разовый выезд специалиста на один автомобиль по вашему выбору.</p>
-                <button class="btn btn ourworks-btn" type="button">от 2000р</button>
+                <button class="btn btn ourworks-btn js-popup-btn" type="button">от 2000р</button>
               </div>
             </div>
             <div class="card ourworks-card">
@@ -211,14 +211,14 @@
                 <h4 class="card-title text-center ourworks-card__title">Эксперт на день</h4>
                 <p class="card-text">
                    Вы подбираете 5-7 вариантов, которые вам нравятся, и берете с собой специалиста на целый рабочий день.</p>
-                <button class="btn btn ourworks-btn" type="button">от 5000р</button>
+                <button class="btn btn ourworks-btn js-popup-btn" type="button">от 5000р</button>
               </div>
             </div>
             <div class="card ourworks-card">
               <div class="card-body"><img class="img-fluid" src="img/all-inclusive-min.jpg" alt="Подбор под ключ"/>
                 <h4 class="card-title text-center ourworks-card__title">Подбор под ключ</h4>
                 <p class="card-text">Мы составляем договор, в котором прописываем все важные вам параметры автомобиля. Мы сами занимаемся его поиском. Вы приезжаете уже на конечный вариант, проверяете и принимаете решение.</p>
-                <button class="btn ourworks-btn" type="button">от 20000р</button>
+                <button class="btn ourworks-btn js-popup-btn" type="button">от 20000р</button>
               </div>
             </div>
           </div>
@@ -274,6 +274,30 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="popup-cont"></div>
+    <div class="popup-wrap">
+      <div class="row col-lg-12 popup-wrap__cont">
+        <div class="popup-exit">
+          <div class="popup-exit__btn"> </div>
+        </div>
+        <form class="col-xl-12 col-lg-8 col-md-10 col-sm-12 popup__form text-center">
+          <fieldset class="popup__form--fieldset">
+            <legend class="popup__form--legend">Оставьте заявку </legend>
+            <div class="form-group row">
+              <label class="col-lg-6 col-form-label popup__form--lbl" for="user-name1">Ваше имя</label>
+              <input class="popup__input--text col-lg-6 form-control" id="user-name1" type="text" value="" placeholder="Имя"/>
+            </div>
+            <div class="form-group row">
+              <label class="col-lg-6 col-form-label popup__form--lbl" for="user-phone1">Ваш телефон</label>
+              <input class="popup__input--text col-lg-6 form-control" id="user-phone1" type="text" value="" placeholder="Телефон"/>
+            </div>
+            <div class="form-group row d-flex justify-content-center">
+              <button class="btn popup__form--btn js-popup-btn">Отправить</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </div>
   </body>
   <script src="js/bundle.js"></script>

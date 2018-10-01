@@ -9,7 +9,7 @@ html(lang="en")
     link(rel="stylesheet", href="css/main.css")
     link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
 
-  body
+  body.body
     .wrapper
       header.header-wrap
         include pug/blocks/header
@@ -21,6 +21,7 @@ html(lang="en")
         include pug/blocks/ourcustomers
       footer.footer
         include pug/blocks/footer
+    include pug/modules/popup
   //- script(src="js/libs.min.js") 
   script(src="js/bundle.js")
  
