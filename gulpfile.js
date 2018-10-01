@@ -61,7 +61,8 @@ const src = {
   ],
   cssLibsTake: [
     'node_modules/normalize.css/normalize.css', 
-    'node_modules/bootstrap/dist/css/bootstrap.css'
+    'node_modules/bootstrap/dist/css/bootstrap.css',
+    'app/libs/csslibs/fontello/fontello.css'
   ],
   jsLibsTake: [
     // 'app/libs/jslibs/lazysizes/lazysizes.js'
