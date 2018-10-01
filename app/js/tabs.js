@@ -13,7 +13,8 @@ const tabs = (function () {
     { id: 'jsBrake', text: 'Мы уделяем особое внимание проверке тормозной системы автомобиля, ведь ее состояние - это вопрос вашей безопасности. Специалист проверяет общий износ расходных частей тормозной системы (диски и колодки), равномерность этого износа и оценит оставшийся срок службы. Затем специалист проверит состояние суппортов и других тормозных механизмов, а также электронных систем (антиблокировка, антипробуксовка, антизанос).' }
   ]
 
-  textDisplay.innerHTML = desc[0].text;
+  textDisplay.innerHTML = `<p>${desc[0].text}</p>`;
+  
 
   function createArr (elem, num, target) {
     let arr = Array.from(elem)
@@ -30,7 +31,6 @@ const tabs = (function () {
       let id = e.target.getAttribute('id');
       let objId = [...desc].filter(val => val.id === id)
       let lineId = [...linesArr].filter(val => val.classList.contains(id))
-      console.log(objId)
 
       for (let key in buttonsArr) {
         buttonsArr[key].classList.remove('js-tab-active')
@@ -47,9 +47,8 @@ const tabs = (function () {
       ) : (
         e.target.classList.add('js-tab-active'),
         lineId[0].classList.add('js-line-active'),
-        textDisplay.innerHTML = objId[0].text
+          textDisplay.innerHTML = `<p>${objId[0].text}</p>`
       );
-      
     })
   })
 })()
