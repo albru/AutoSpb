@@ -26,9 +26,7 @@
     background-color: $orange;
     clip-path: $btnclip;
     padding: $padding10 $padding20;
-    &:hover {
-      background-color: lighten($orange, 8%);
-    }
+    cursor: initial;
   }
   &__btn-cont {
     padding: 25px;
