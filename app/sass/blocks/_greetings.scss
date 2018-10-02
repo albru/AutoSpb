@@ -53,15 +53,15 @@
       margin-bottom: $margin15;
     }
     &-checkbox {
-      margin-right: 10px !important;
-      margin-top: 5px !important;
+      margin-right: 10px;
+      margin-top: 5px;
     }
     &-checklbl {
-      color: $gray!important;
+      color: $gray;
     }
     &-privacy {
-      border-bottom: 1px solid $gray !important;
-      cursor: pointer !important;
+      border-bottom: 1px solid $gray;
+      cursor: pointer;
     }
     &-lbl {
       white-space: nowrap;

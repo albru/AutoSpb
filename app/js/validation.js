@@ -1,6 +1,7 @@
 $(document).ready(function () {
   var msg = "";
   var elements = document.getElementsByTagName("INPUT");
+  console.log(elements);
 
   for (var i = 0; i < elements.length; i++) {
     elements[i].oninvalid = function (e) {
@@ -15,6 +16,8 @@ $(document).ready(function () {
           case 'phone1':
             e.target.setCustomValidity("Напишите Ваш телефон"); break;
           case 'form-check-input':
+            e.target.setCustomValidity("Необходимо согласие на обработку"); break;
+          case 'form-check-input1':
             e.target.setCustomValidity("Необходимо согласие на обработку"); break;
           default: e.target.setCustomValidity(""); break;
         }
