@@ -10,12 +10,15 @@
         input.hidden-input(type='hidden', name='admin_email', value='admin@albru.ru')
         input.hidden-input(type='hidden', name='form_subject', value='Заявка на автоподбор')
         .form-group.row
-          label.col-lg-6.col-form-label.popup__form--lbl(for='name') Ваше имя
-          input#name.popup__input--text.col-lg-6.form-control(type='text', placeholder='Имя', name='name')
+          label.col-lg-6.col-form-label.popup__form--lbl(for='name1') Ваше имя
+          input#name1.name.popup__input--text.col-lg-6.form-control(type='text', placeholder='Имя', name='name')
         .form-group.row
-          label.col-lg-6.col-form-label.popup__form--lbl(for='phone') Ваш телефон
-          input#phone.popup__input--text.col-lg-6.form-control(type='number', placeholder='Телефон', name='phone')
-      button#btn-submit-form.btn.popup__form--btn(type='submit') Отправить
-      button.my-works__contacts-submit(type='submit') Отправить
+          label.col-lg-6.col-form-label.popup__form--lbl(for='phone1') Ваш телефон
+          input#phone1.phone.popup__input--text.col-lg-6.form-control(type='tel', placeholder='Телефон', name='phone')
+        button#btn-submit-form.btn.popup__form--btn(type='submit') Отправить
+        .col-lg-12.d-flex.justify-content-center.popup__DoneJS
+            i(class="icon-ok", style="color: green;")
+            span Спасибо! Мы свяжемся с Вами в ближайшее время.
+
 
 
