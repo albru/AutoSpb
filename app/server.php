@@ -1,46 +1,53 @@
 <?php
 
-    $name = $_POST['user-name'];
-    $email = $_POST['user-email'];
-    $pay = $_POST['pay-option'];
-    $message = $_POST['message'];
-
-    $disturb = $_POST['dont-disturb']; // 1 или null
-    $disturb = isset($disturb) ? 'НЕТ' : 'ДА';
-
-    $mail_message = '
-    <html>
-    <head>
-        <title>Заявка</title>
-    </head>
-    <body>
-        <h2>Заказ</h2>
-        <ul>
-            <li>Имя:' . $name . '</li>
-            <li>Email: ' . $email . '</li>
-            <li>Способ оплаты: ' . $pay . '</li>
-            <li>Комментарий к заказу: ' . $message . '</li>
-            <li>Нужно ли перезванивать клиенту: ' . $disturb . '</li>
-        </ul>
-    </body>
-    </html>';
-
-    $headers = "From: Администратор сайта <admin@gaponovd.ru>\r\n".
-                "MIME-Version: 1.0" . "\r\n" .
-                "Content-type: text/html; charset=UTF-8" . "\r\n";
-
-    $mail = mail('bryukhanovspb@gmail.com', 'Заказ', $mail_message, $headers);
-
-    $data = [];
-
-    if ($mail) {
-        $data['status'] = "OK";
-        $data['mes'] = "Письмо успешно отправлено";
-    }else{
-        $data['status'] = "NO";
-        $data['mes'] = "На сервере произошла ошибка";
+$method = $_SERVER['REQUEST_METHOD'];
+ 
+//Script Foreach
+$c = true;
+if ( $method === 'POST' ) {
+ 
+  $project_name = trim($_POST["project_name"]);
+  $admin_email  = trim($_POST["admin_email"]);
+  $form_subject = trim($_POST["form_subject"]);
+  $client_name = trim($_POST["name"]);
+ 
+  foreach ( $_POST as $key => $value ) {
+    if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+      $message .= "
+      " . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+        <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
+        <td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
+      </tr>
+      ";
     }
-
-    echo json_encode($data);
-
-?>
+  }
+} else if ( $method === 'GET' ) {
+ 
+  $project_name = trim($_GET["project_name"]);
+  $admin_email  = trim($_GET["admin_email"]);
+  $form_subject = trim($_GET["form_subject"]);
+ 
+  foreach ( $_GET as $key => $value ) {
+    if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+      $message .= "
+      " . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+        <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
+        <td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
+      </tr>
+      ";
+    }
+  }
+}
+ 
+$message = "<table style='width: 100%;'>$message</table>";
+ 
+function adopt($text) {
+  return '=?UTF-8?B?'.Base64_encode($text).'?=';
+}
+ 
+$headers = "MIME-Version: 1.0" . PHP_EOL .
+"Content-Type: text/html; charset=utf-8" . PHP_EOL .
+'From: <'.$client_name.'>' . PHP_EOL .
+'Reply-To: '.$admin_email.'' . PHP_EOL;
+ 
+mail($admin_email, adopt($form_subject), $message, $headers);

@@ -3,7 +3,7 @@ import tabs from './tabs'
 import buttons from './buttons'
 import features from './features'
 import scroll from './scroll'
-
+import sendMail from './sendMail'
 
 
 

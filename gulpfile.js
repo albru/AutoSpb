@@ -65,7 +65,7 @@ const src = {
     'app/libs/csslibs/fontello/fontello.css'
   ],
   jsLibsTake: [
-    // 'app/libs/jslibs/lazysizes/lazysizes.js'
+    'node_modules/jquery/dist/jquery.js'
   ],
 
   svgPut: 'app/img/sprites/',
@@ -141,12 +141,12 @@ gulp.task('scripts', function () {
 });
 
 
-// gulp.task('jslibs', function () {
-//   return gulp.src(src.jsLibsTake)
-//     .pipe(concat('libs.min.js'))
-//     .pipe(uglify())
-//     .pipe(gulp.dest(src.jsPut));
-// });
+gulp.task('jslibs', function () {
+  return gulp.src(src.jsLibsTake)
+    .pipe(concat('libs.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(src.jsPut));
+});
 
 // WATCH & AUTO UPDATE
 
@@ -174,7 +174,7 @@ gulp.task('browser-sync', function () {
 
 // +++++ ADD TO BUILD JSLIBS BELOW!!!
 
-gulp.task('watch', gulp.series(['css-libs', 'browser-sync']), function () {
+gulp.task('watch', gulp.series(['css-libs', 'jslibs', 'browser-sync']), function () {
 });
 
 // MINIFY IMGS
