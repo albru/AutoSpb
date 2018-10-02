@@ -25,15 +25,25 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 30;
-    &__cont {
-      position: absolute;
-      will-change: opacity;
-      will-change: transform;
-      top: -30%;
-      left: 50%;
-      transform: translateX(-50%);
-      animation: popup ease-in .3s forwards;
-    }
+  }
+  &__input-text:focus {
+    outline: none;
+    border: 1px solid $orange;
+  }
+  &__DoneJS {
+    opacity: 0;
+  }
+  &__DoneJS1 {
+    opacity: 0;
+  }
+  &__cont {
+    position: absolute;
+    will-change: opacity;
+    will-change: transform;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: popup ease-in .3s forwards;
   }
   &__form {
     text-transform: uppercase;
@@ -95,16 +105,6 @@
       background-color: $gray;
       transform: rotate(-45deg);
     }
-  }
-  &__input-text:focus {
-    outline: none;
-    border: 1px solid $orange;
-  }
-  &__DoneJS {
-    opacity: 0;
-  }
-  &__DoneJS1 {
-    opacity: 0;
   }
 }
 
