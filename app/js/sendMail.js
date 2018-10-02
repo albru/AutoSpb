@@ -4,7 +4,7 @@ const formElem = $("#submit-form");
 const popupElem1 = $('.popup__DoneJS1');
 const formElem1 = $("#submit-form1");
 
-const function submitForm(form, pop) {
+function submitForm(form, pop) {
   $(document).ready(function () {
     const popup = pop;
     const popupFunc = function () {

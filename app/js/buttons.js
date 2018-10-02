@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const body = document.querySelector('.body');
     let popupActive = false;
 
-    const function formExit(elem) {
+    function formExit(elem) {
       elem.addEventListener('click', function (e) {
         e.stopPropagation();
         if (popupActive = true) {

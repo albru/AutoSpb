@@ -11,14 +11,18 @@
         input.hidden-input(type='hidden', name='form_subject', value='Заявка на автоподбор')
         .form-group.row
           label.col-lg-6.col-form-label.popup__form--lbl(for='name1') Ваше имя
-          input#name1.name.popup__input--text.col-lg-6.form-control(type='text', placeholder='Имя', name='name')
+          input#name1.name.popup__input--text.col-lg-6.form-control(type='text', placeholder='Имя', name='name' required)
         .form-group.row
           label.col-lg-6.col-form-label.popup__form--lbl(for='phone1') Ваш телефон
-          input#phone1.phone.popup__input--text.col-lg-6.form-control(type='tel', placeholder='Телефон', name='phone')
+          input#phone1.phone.popup__input--text.col-lg-6.form-control(type='tel', placeholder='Телефон', name='phone' required)
         button#btn-submit-form.btn.popup__form--btn(type='submit') Отправить
         .col-lg-12.d-flex.justify-content-center.popup__DoneJS
             i(class="icon-ok", style="color: green;")
             span Спасибо! Мы свяжемся с Вами в ближайшее время.
+        .form-group.col-lg-12.d-flex.justify-content-center
+          input.header-second__form-checkbox(type="checkbox" value="" id="form-check-input" required checked)
+          label.header-second__form-checklbl(for="form-check-input") Я прочитал и согласен с 
+            span.header-second__form-privacy обработкой данных
 
 
 

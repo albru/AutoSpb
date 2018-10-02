@@ -52,6 +52,17 @@
     &--legend {
       margin-bottom: $margin15;
     }
+    &-checkbox {
+      margin-top: rem(5px);
+      margin-right: rem(5px);
+    }
+    &-checklbl {
+      color: $gray;
+    }
+    &-privacy {
+      border-bottom: 1px solid $gray;
+      cursor: pointer;
+    }
     &--lbl {
       white-space: nowrap;
       position: relative;
