@@ -41,10 +41,10 @@
     color: $black;
     background-color: $white;
     border-radius: rem(10px);
-    &--legend {
+    &-legend {
       margin-bottom: $margin15;
     }
-    &--lbl {
+    &-lbl {
       white-space: nowrap;
       position: relative;
       &:after {
@@ -58,7 +58,7 @@
         background-color: $black;
       }
     }
-    &--btn {
+    &-btn {
       background-color: $orange;
       color: $white;
       text-transform: uppercase;
@@ -96,7 +96,7 @@
       transform: rotate(-45deg);
     }
   }
-  &__input--text:focus {
+  &__input-text:focus {
     outline: none;
     border: 1px solid $orange;
   }
