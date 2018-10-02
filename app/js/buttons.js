@@ -23,23 +23,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const body = document.querySelector('.body');
     let popupActive = false;
 
-    popupCont.addEventListener('click', function (e) {
-      e.stopPropagation();
-      if(popupActive = true) {
-        popupCont.style.display = 'none';
-        popupWrap.style.display = 'none';
-        body.style.overflow = 'initial';
-      }
-    })
+    const function formExit(elem) {
+      elem.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (popupActive = true) {
+          popupCont.style.display = 'none';
+          popupWrap.style.display = 'none';
+          body.style.overflow = 'initial';
+        }
+      })
+    }
 
-    popupExitBtn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      if (popupActive = true) {
-        popupCont.style.display = 'none';
-        popupWrap.style.display = 'none';
-        body.style.overflow = 'initial';
-      }
-    })
+    formExit(popupCont)
+    formExit(popupExitBtn)
 
     popupBtnsArr.forEach(el => {
       el.addEventListener('click', function (e) {
@@ -54,6 +50,5 @@ document.addEventListener("DOMContentLoaded", function (event) {
         popupActive = !popupActive;
       })
     })
-
   })()
 });
