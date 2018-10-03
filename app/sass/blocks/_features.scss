@@ -14,7 +14,7 @@
   }
   &-img--left {
     position: absolute;
-    left: -50%;
+    left: -57%;
     top: 10%;
     z-index: 2;
   }
@@ -26,13 +26,30 @@
     min-height: 650px;
 
   }
+  &-right {
+    color: $white;
+    &__list {
+      padding: $padding10;
+      border-radius: rem(3px);
+      & > li {
+        display: flex;
+      }
+      &-icon {
+        color: $orange;
+      }
+    }
+    &__list > li > h3 {
+      font-weight: bold;
+    }
+  }
   &-left {
   background-color: $orange;
   min-height: 100%;
   position: relative;
+  margin-top: -$margin25;
   }
   &-list {
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-top: -50px;
     color: $white;
@@ -52,22 +69,31 @@
       width: 50%;
       z-index: 1;
       padding: 0 $padding20;
+      & > p {
+        margin-bottom: 0;
+        padding: 3px;
+
+      }
+      & > h3 {
+        font-weight: bold;
+      }
       &-icon {
         background: $orange;
         position: absolute;
+        border-radius: 50%;
         &--1 {
           top: 50%;
-          right: -15%;
+          right: -11%;
           transform: translateY(-50%);
         }
         &--2 {
           top: 50%;
-          left: -16%;
+          left: -11%;
           transform: translateY(-50%);
         }
         &--3 {
           top: 50%;
-          right: -13%;
+          right: -11%;
           transform: translateY(-50%);
         }
       }
@@ -83,9 +109,6 @@
         margin-right: auto;
         position: relative;
       }
-    }
-    &__li {
-      
     }
   }
 }
