@@ -5,6 +5,21 @@
 @import "../animation/anim.scss";
 
 
+.popup-privacy {
+  padding: $padding10;
+  background-color: $black;
+  border-radius: rem(3px);
+  transition: all .3s;
+  &-cont {
+    color: $white;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    font-size: rem(10px);
+    opacity: 0;
+  }
+}
+
 .popup {
   &-cont {
     display: none;
@@ -41,6 +56,9 @@
     color: $black;
     background-color: $white;
     border-radius: rem(10px);
+    &-fieldset {
+      position: relative;
+    }
     &-legend {
       margin-bottom: $margin15;
     }
@@ -63,7 +81,9 @@
     }
     &-privacy {
       border-bottom: 1px solid $gray;
-      cursor: pointer;
+      cursor: help;
+      color: $gray;
+      margin-left: rem(3px);
     }
     &-checkbox {
       margin-right: 10px;

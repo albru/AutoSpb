@@ -37,10 +37,14 @@
                 label.col-lg-6.col-form-label.header-second__form-lbl(for='phone') Ваш телефон
                 input#phone.header-second__input-text.col-lg-6.form-control(type='tel', name='phone', placeholder='Телефон' required)
               button.btn.header-second__form-btn(type='submit') Отправить 
-              .form-group.col-lg-12.d-flex.justify-content-center
+              .form-group.col-lg-12
                 input.header-second__form-checkbox(type="checkbox" value="" id="form-check-input" required checked)
                 label.header-second__form-checklbl(for="form-check-input") Я прочитал и согласен с 
-                  span.header-second__form-privacy обработкой данных
+                span.header-second__form-privacy обработкой данных
               .form-group.col-lg-12.d-flex.justify-content-center.popup__DoneJS1
                 i(class="icon-ok", style="color: green;")
                 span Спасибо! Мы свяжемся с Вами в ближайшее время.
+                //- styles in greetings.scss
+                //- js code in buttons.js
+              .privacy-cont
+                p.privacy Настоящим вы выражаете свое согласие для использования продавцом или уполномоченным лицом продавца ваших персональных данных, в том числе путем осуществления автоматизированного анализа персональных данных, а также на их передачу различными способами, без ограничения срока действия. В соответствии с п. 5 ст. 21 ФЗ «О персональных данных» настоящее согласие может быть отозвано только при условии письменного уведомления на почту не менее чем за 5 календарных дней до предполагаемой даты прекращения использования персональных данных .

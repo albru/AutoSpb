@@ -14,6 +14,29 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   })();
 
+  const greetingsPrivacy = document.querySelector('.header-second__form-privacy');
+  const greetingsPrivacyText = document.querySelector('.privacy-cont');
+  const popupPrivacy = document.querySelector('.popup__form-privacy');
+  const popupPrivacyText = document.querySelector('.popup-privacy-cont');
+
+  function showPrivacy (mouseOveElem, elem) {
+    mouseOveElem.addEventListener('mouseover', function () {
+      elem.style.opacity = 1;
+    })
+
+    mouseOveElem.addEventListener('mouseleave', function () {
+      elem.style.opacity = 0;
+    })
+}
+
+showPrivacy(greetingsPrivacy, greetingsPrivacyText)
+showPrivacy(popupPrivacy, popupPrivacyText)
+
+
+
+
+
+
   const popupButtons = (function (params) {
     const popupBtns = document.querySelectorAll('.js-popup-btn');
     const popupBtnsArr = Array.from(popupBtns);

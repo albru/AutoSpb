@@ -4,6 +4,21 @@
 @import "../misc/mixins";
 @import "../misc/variables";
 
+.privacy {
+  padding: $padding10;
+  background-color: $white;
+  border-radius: rem(2px);
+  transition: all .3s;
+  &-cont {
+    color: $black;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    font-size: rem(10px);
+    opacity: 0;
+  }
+}
+
 .header-second {
   background-image: url("../img/background-min.jpg");
   min-height: 650px;
@@ -49,6 +64,9 @@
     color: $white;
     background-color: $blackTT;
     border-radius: rem(10px);
+    &-fieldset {
+      position: relative;
+    }
     &-legend {
       margin-bottom: $margin15;
     }
@@ -61,7 +79,9 @@
     }
     &-privacy {
       border-bottom: 1px solid $gray;
-      cursor: pointer;
+      cursor: help;
+      color: $gray;
+      margin-left: rem(3px);
     }
     &-lbl {
       white-space: nowrap;
