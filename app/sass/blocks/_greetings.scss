@@ -26,7 +26,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  margin-top: 107px;
   &__row {
     min-height: 650px;
   }
@@ -34,6 +33,9 @@
     padding: 35px;
     font-family: $rob;
     color: $white;
+    @include laptop {
+      padding: $padding15;
+    }
   }
   &__btn {
     text-transform: uppercase;
@@ -52,6 +54,9 @@
   &__container--left {
     min-height: 100%;
     padding: 45px;
+    @include tablets {
+      display: none;
+    }
   }
   &__container--right {
   padding: 0;

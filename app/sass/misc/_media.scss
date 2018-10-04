@@ -1,22 +1,19 @@
 @import "../misc/mixins.scss";
 
-// @mixin desktop {
-//   @media screen and (min-width: $desktop) {
-//     @content;
-//   }
-// }
+$laptop: 1233px;
+$tablets: 992px;
 
-// @mixin laptop {
-//   @media screen and (min-width: $laptop) {
-//     @content;
-//   }
-// }
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
 
-// @mixin tablets {
-//   @media screen and (min-width: $tablets) {
-//     @content;
-//   }
-// }
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
 
 // @mixin phones {
 //   @media screen and (min-width: $phones) {

@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const linkNav = document.querySelectorAll('[href^="#"]') 
     const V = 0.3;
     const headerHeight = document.querySelector('.header-container').offsetHeight;
-    console.log(headerHeight)
+    const headerSecond = document.querySelector('.header-second__container');
+    headerSecond.style.paddingTop = headerHeight + 'px';
 
     for (let i = 0; i < linkNav.length; i++) {
       linkNav[i].addEventListener('click', function (e) {

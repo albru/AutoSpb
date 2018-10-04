@@ -1,12 +1,12 @@
 .container-fluid.header-container
   .row
-    .header-logo.col-lg-3.d-flex.justify-content-center.align-items-center 
-      a.header-logo-link Пушка Подбор
-    .header.col-lg-9 
+    .header-logo.col-xl-3.col-lg-2.d-flex.justify-content-center.align-items-center
+      img.logo(src="img/logo.png", alt="Пушка Подбор", oncontextmenu="return false;")
+    .header.col-xl-9.col-lg-10
       .header-info
         .container
-          .row
-            .header-socials.col-lg-4.d-flex.justify-content-end.align-items-center
+          .row.header-tablets
+            .header-socials.col-xl-4.col-md-2.d-flex.justify-content-end.align-items-center
               ul.header-socials__list
                 li.header-socials__item 
                   a.header-socials__link(href="#")
@@ -14,10 +14,10 @@
                 li.header-socials__item 
                   a.header-socials__link(href="#")
                     i(class="header-socials-icon icon-vkontakte") 
-            .header-worktime.col-lg-4.d-flex.justify-content-center.align-items-center
+            .header-worktime.col-xl-4.col-md-6.d-flex.justify-content-center.align-items-center
               i(class="clock icon-clock")
               .header-worktime__item Время работы - С 08 до 20
-            .header-phone-cont.col-lg-4.d-flex.justify-content-start.align-items-center 
+            .header-phone-cont.col-xl-4.col-md-4.d-flex.justify-content-start.align-items-center 
               a.header-phone(href="tel:+79817554101") +7 (981) 755 41 01
                 i(class="header-socials-icon whatsapp icon-whatsapp")
 

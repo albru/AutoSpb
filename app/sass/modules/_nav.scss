@@ -9,6 +9,9 @@
   &-cont{
     padding: 0;
     clip-path: polygon(4% 0, 100% 0, 100% 100%, 0% 100%);
+    @include tablets {
+      clip-path: none;
+    }
   }
   &-main {
   background-color: $orange;
@@ -20,6 +23,10 @@
   position: relative;
   overflow: hidden;
   will-change: transform;
+  @include laptop {
+    padding-left: 0;
+    padding-right: $padding10;
+  }
     &::after {
       transition: all .2s;
       position: absolute;

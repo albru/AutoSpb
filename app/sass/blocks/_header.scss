@@ -14,14 +14,15 @@
 
 .header {
   padding: 0;
+  &-logo > img {
+    width: 300px;
+    @include laptop {
+      width: 200px;
+    }
+  }
   &-container {
     background-color: $black;
     border-bottom: 1px solid $white;
-  }
-  &-logo {
-    color:$white;
-    font-family: $rob;
-    font-size: $logo;
   }
   &-socials {
     position: relative;
@@ -84,6 +85,11 @@
     }
     & > .whatsapp {
       margin-left: $margin10;
+    }
+  }
+  &-tablets {
+    @include tablets {
+
     }
   }
 }

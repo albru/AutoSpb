@@ -1,3 +1,4 @@
+//- JS padding in scroll.js
 .container-fluid.header-second.header-second__container(id="greetings")
   .row.header-second__row
     .col-lg-6.header-second__container--left
@@ -24,18 +25,18 @@
         .row
           h1.col-lg-12.text-center.header-second__title Найдем для Вас лучший автомобиль с пробегом!
         .row.d-flex.justify-content-center
-          form#submit-form1.col-xl-8.col-lg-10.col-md-10.col-sm-12.header-second__form.text-center
+          form#submit-form1.col-xl-8.col-lg-10.col-md-8.col-sm-8.col-8.header-second__form.text-center
             fieldset.header-second__form-fieldset
               legend.header-second__form-legend Оставьте заявку 
               input.hidden-input(type='hidden', name='project_name', value='autopodbor')
               input.hidden-input(type='hidden', name='admin_email', value='admin@albru.ru')
               input.hidden-input(type='hidden', name='form_subject', value='Заявка на автоподбор')
               .form-group.row
-                label.col-lg-6.col-form-label.header-second__form-lbl(for='name') Ваше имя
-                input#name.header-second__input-text.col-lg-6.form-control(type='text', placeholder='Имя', name='name' required)
+                label.col-lg-6.col-md-6.col-form-label.header-second__form-lbl(for='name') Ваше имя
+                input#name.header-second__input-text.col-lg-6.col-md-6.form-control(type='text', placeholder='Имя', name='name' required)
               .form-group.row
-                label.col-lg-6.col-form-label.header-second__form-lbl(for='phone') Ваш телефон
-                input#phone.header-second__input-text.col-lg-6.form-control(type='tel', name='phone', placeholder='Телефон' required)
+                label.col-lg-6.col-md-6.col-form-label.header-second__form-lbl(for='phone') Ваш телефон
+                input#phone.header-second__input-text.col-lg-6.col-md-6.form-control(type='tel', name='phone', placeholder='Телефон' required)
               button.btn.header-second__form-btn(type='submit') Отправить 
               .form-group.col-lg-12
                 input.header-second__form-checkbox(type="checkbox" value="" id="form-check-input" required checked)
