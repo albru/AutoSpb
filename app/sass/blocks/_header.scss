@@ -3,6 +3,8 @@
 @import "../misc/mixins";
 @import "../misc/variables";
 
+// JS position condition in scroll.js
+
 .header-wrap {
   overflow: hidden;
   position: fixed;
@@ -10,14 +12,36 @@
   top: 0;
   left: 0;
   z-index: 10;
+  @include laptop {
+    position: static;
+  }
 }
 
 .header {
   padding: 0;
+  @include tablets {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+  &-logo {
+    @include tablets {
+      justify-content: flex-start!important;
+    }
+    @include phones-min {
+      justify-content: center!important;
+    }
+  }
   &-logo > img {
     width: 300px;
     @include laptop {
       width: 200px;
+    }
+    @include phones {
+      margin-left: -80px;
+    }
+    @include phones {
+      margin-left: 0;
     }
   }
   &-container {
@@ -26,6 +50,18 @@
   }
   &-socials {
     position: relative;
+    @include tablets {
+      padding-right: 0;
+      justify-content: center;
+    }
+    @include phones {
+      align-items: center;
+      justify-content: center!important;
+    }
+    @include phones-min {
+      padding-left: $padding10;
+      justify-content: flex-end!important;
+    }
     &:after {
       content:'';
       position: absolute;
@@ -35,6 +71,9 @@
       width: rem(2px);
       height: rem(15px);
       background-color: $gray;
+      @include phones {
+        display: none;
+      }
     }
     &-icon {
       color: $white;
@@ -53,6 +92,14 @@
   &-worktime {
     color: $white;
     position: relative;
+    & > i {
+      @include tablets {
+        display: none;
+      }
+    }
+    @include phones {
+      display: none!important;
+    }
     &:after {
       content:'';
       position: absolute;
@@ -72,6 +119,21 @@
     font-family: 'russo', Helvetica, sans-serif;
     padding: $padding10;
     transition: all .3s;
+    // & > i {
+    //   @include phones-min {
+    //     display: none;
+    //   }
+    // }
+    &-cont {
+      @include phones {
+        justify-content: center!important;
+        padding-right: 25px;
+      }
+      @include phones-min {
+      padding: 0;
+      justify-content: flex-start!important;
+      }
+    }
     &:hover {
       text-decoration: none;
       color: $orange;
@@ -88,8 +150,11 @@
     }
   }
   &-tablets {
-    @include tablets {
-
+    @include phones-min {
+      width: 500px;
+    }
+    @include phones {
+      justify-content: flex-end;
     }
   }
 }

@@ -14,6 +14,9 @@
   &-cont {
     min-height: 650px;
     position: relative;
+    @include phones-min {
+      display: none;
+    }
   }
   &-wrap {
     position: relative;
@@ -62,7 +65,10 @@
         padding-left: 60px;
       }
       @include tablets {
-        padding-left: 30px;
+        padding-left: 60px;
+      }
+      @include phones {
+        padding-left: 50px;
       }
       &::before {
         content: '';
@@ -75,7 +81,7 @@
         clip-path: polygon(0 0, 100% 0%, 66% 100%, 0% 100%);
         transition: all .3s;
         @include tablets {
-          clip-path: none;
+
         }
       }
       &::after {
@@ -93,22 +99,21 @@
       }
     }
     &__line {
-      width: 150px;
+      width: 120px;
       height: 2px;
       border: 2px dashed $orange;
       position: absolute;
       top: 50%;
-      left: -55%;
+      left: -39%;
       z-index: 1;
       transition: all .3s;
       opacity: 0;
       @include laptop {
-        width: 100px;
-        left: -45%;
+        width: 50px;
+        left: -22%;
       }
       @include tablets {
-        width: 70px;
-        left: -78%;
+        display: none;
       }
     }
   }

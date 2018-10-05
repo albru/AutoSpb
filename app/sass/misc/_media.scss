@@ -2,6 +2,8 @@
 
 $laptop: 1233px;
 $tablets: 992px;
+$phones: 768px;
+$phones-min: 576px;
 
 @mixin laptop {
   @media screen and (max-width: $laptop) {
@@ -15,8 +17,14 @@ $tablets: 992px;
   }
 }
 
-// @mixin phones {
-//   @media screen and (min-width: $phones) {
-//     @content;
-//   }
-// }
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+@mixin phones-min {
+  @media screen and (max-width: $phones-min) {
+    @content;
+  }
+}
