@@ -156,8 +156,23 @@
   }
   &__DoneJS {
     opacity: 0;
+    @include phones-min {
+      flex-direction: column;
+      align-items: center!important;
+    }
+    & > i {
+      font-size: 25px;
+    }
   }
   &__DoneJS1 {
     opacity: 0;
+    @include phones-min {
+      flex-direction: column;
+      align-items: center!important;
+ 
+    }
+    & > i {
+      font-size: 25px;
+    }
   }
 }

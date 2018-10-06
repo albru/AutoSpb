@@ -5,16 +5,25 @@
 
 .footer {
   color: $gray;
-
+  &-desc {
+    @include tablets {
+      justify-content: flex-start!important;
+      align-items: center!important;
+      text-align: center;
+    }
+    & > p {
+      margin: 0;
+    }
+    & > h3 {
+      margin: 0;
+    }
+  }
   &-cont {
     min-height: 325px;
     background-image: url('../img/footer-min.jpg');
     background-size: cover;
     background-position: center center;
     border-top: 1px solid $white;
-  }
-  &-logo {
-
   }
   &-section-title {
     font-family: 'russo', Helvetica, sans-serif;
@@ -40,11 +49,6 @@
     }
   }
   &-contacts {
-    &__item {
-      &-link {
-      
-      }
-    }
     &__phone {
         margin-right: $margin10;
         margin-bottom: $margin10;
@@ -54,6 +58,9 @@
         font-family: 'russo', Helvetica, sans-serif;
         padding: $padding10;
         transition: all .3s;
+        @include tablets {
+          margin-right: 0;
+        }
         &:hover {
           text-decoration: none;
           color: $orange;
