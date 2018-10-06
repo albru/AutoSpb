@@ -38,10 +38,10 @@
       width: 200px;
     }
     @include phones {
-      margin-left: -80px;
-    }
-    @include phones {
       margin-left: 0;
+    }
+    @include phones-min {
+      width: 130px;
     }
   }
   &-container {
@@ -59,8 +59,7 @@
       justify-content: center!important;
     }
     @include phones-min {
-      padding-left: $padding10;
-      justify-content: flex-end!important;
+      margin-top: 10px;
     }
     &:after {
       content:'';
@@ -124,6 +123,9 @@
     //     display: none;
     //   }
     // }
+    @include phones-min {
+      padding-top: 0;
+    }
     &-cont {
       @include phones {
         justify-content: center!important;
@@ -131,7 +133,6 @@
       }
       @include phones-min {
       padding: 0;
-      justify-content: flex-start!important;
       }
     }
     &:hover {
