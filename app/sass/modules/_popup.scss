@@ -65,6 +65,11 @@
     color: $black;
     background-color: $white;
     border-radius: rem(10px);
+    &-cont {
+      @include phones-min {
+        display: block!important;
+      }
+    }
     &-fieldset {
       position: relative;
     }

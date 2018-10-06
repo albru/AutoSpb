@@ -4,10 +4,19 @@ const slider = (function() {
     const left = document.querySelector('.js-slider-left');
     const right = document.querySelector('.js-slider-right');
     const items = document.querySelector('.js-slider-items');
-
+    const slides = Array.from(document.querySelectorAll('.ourcustomers-item'));
+    const itemWidth = document.querySelector('.ourcustomers-slider__wrap').offsetWidth;
     const minRight = 0;
-    const maxRight = 1400;
-    const step = 700;
+    let maxRight = itemWidth * 2;
+    let step = itemWidth;
+    console.log(slides)
+
+    slides.forEach(item => {
+      item.style.width = itemWidth + 'px';
+    })
+
+
+
     let currentRight = 0;
 
     items.style.right = currentRight;

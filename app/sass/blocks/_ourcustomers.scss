@@ -16,35 +16,42 @@
   }
   &-slider {
     overflow: hidden;
-    width: 700px;
-    max-height: 200px;
+    max-height: 350px;
+    &__wrap {
+      position: relative;
+    }
     &__cont{
-      margin-top: 100px;
       border: 3px solid $white;
       border-radius: rem(5px);
       padding: $padding15;
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      background-color: $white;
+      margin-top: 100px;
+      @include tablets {
+        margin-top: 0;
+      }
     }
   }
   &-arrow {
-    background-color: transparent;
-    width: 50px;
-    height: 50px;
-    border-left: 10px solid $white;
-    border-top: 10px solid $white;
-    border-right: none;
-    border-bottom: none;
     cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 90;
     &:focus {
       outline: none;
     }
-  }
-  &-arrow__left {
-    transform: rotate(-45deg);
-    opacity: .2;
+    & > i {
+      font-size: 20px;
+    }
   }
   &-arrow__right {
-    transform: rotate(135deg);
+    right: -20px;
+  }
+  &-arrow__left {
+    opacity: .2;
+    left: 0;
+
   }
   &-items {
     position: relative;
@@ -53,5 +60,31 @@
   }
   &-item {
     width: 700px;
+    @include laptop {
+      width: 575px;
+    }
+    @include tablets {
+      width: 645px;
+    }
+    @include phones {
+      width: 465px;
+    }
+    @include phones-min {
+      width: 215px;
+    }
+  }
+}
+
+.slider {
+  &-title {
+    font-weight: bold;
+  }
+  &-text {
+    font-weight: normal;
+  }
+  &-desc__cont {
+    @include tablets {
+      margin-top: $margin15;
+    }
   }
 }
