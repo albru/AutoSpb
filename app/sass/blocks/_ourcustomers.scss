@@ -38,6 +38,8 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 90;
+    color: $white;
+    background-color: lighten($orange, 10%);
     &:focus {
       outline: none;
     }
@@ -50,7 +52,7 @@
   }
   &-arrow__left {
     opacity: .2;
-    left: 0;
+    left: -20px;
 
   }
   &-items {
