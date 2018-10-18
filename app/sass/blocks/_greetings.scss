@@ -4,6 +4,11 @@
 @import "../misc/mixins";
 @import "../misc/variables";
 
+.title-keywords {
+  position: absolute;
+  top: -300vh;
+}
+
 .privacy {
   padding: $padding10;
   background-color: $white;
