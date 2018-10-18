@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-  const priceBtn = (function (params) {
+  const priceBtnHandler = (function (params) {
     let buttons = document.querySelectorAll('.ourworks-btn');
     let buttonsArr = Array.from(buttons);
     
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showPrivacy(greetingsPrivacy, greetingsPrivacyText)
 showPrivacy(popupPrivacy, popupPrivacyText)
 
-  const popupButtons = (function (params) {
+  const popupHandler = (function (params) {
     const popupBtns = document.querySelectorAll('.js-popup-btn');
     const popupBtnsArr = Array.from(popupBtns);
     const popupCont = document.querySelector('.popup-cont');

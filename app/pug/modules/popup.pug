@@ -9,18 +9,18 @@
         input.hidden-input(type='hidden', name='project_name', value='autopodbor')
         input.hidden-input(type='hidden', name='admin_email', value='admin@albru.ru')
         input.hidden-input(type='hidden', name='form_subject', value='Заявка на автоподбор')
-        .form-group.row
+        .form-group.row.d-flex.justify-content-center
           label.col-xl-6.col-lg-6.col-md-6.col-sm-6.col-form-label.popup__form-lbl(for='name1') Ваше имя
-          input#name1.name.popup__input-text.col-xl-6.col-lg-6.col-md-6.col-sm-6.form-control(type='text', placeholder='Имя', name='name' required)
-        .form-group.row
+          input#name1.name.popup__input-text.col-xl-6.col-lg-6.col-md-6.col-sm-6.col-8.form-control(type='text', placeholder='Имя', name='name' required)
+        .form-group.row.d-flex.justify-content-center
           label.col-xl-6.col-lg-6.col-md-6.col-sm-6.col-form-label.popup__form-lbl(for='phone1') Ваш телефон
-          input#phone1.phone.popup__input-text.col-xl-6.col-lg-6.col-md-6.col-sm-6.form-control(type='tel', placeholder='Телефон', name='phone' required)
+          input#phone1.phone.popup__input-text.col-xl-6.col-lg-6.col-md-6.col-sm-6.col-8.form-control(type='tel', placeholder='Телефон', name='phone' required)
         button#btn-submit-form.btn.popup__form-btn(type='submit') Отправить
-        .form-group.popup__form-cont.col-xl-12.d-flex.justify-content-center
+        .form-group.popup__form-cont.col-xl-12.d-flex.justify-content-center.align-items-center
           input.popup__form-checkbox(type="checkbox" value="" id="form-check-input1" required checked)
           label.popup__form-checklbl(for="form-check-input1") Я прочитал и согласен с 
             span.popup__form-privacy обработкой данных
-        .form-group.col-xl-12.d-flex.justify-content-center.popup__DoneJS
+        .form-group.col-xl-12.popup__DoneJS
             i(class="icon-ok", style="color: green;")
             span Спасибо! Мы свяжемся с Вами в ближайшее время.
         //- styles in popup.scss

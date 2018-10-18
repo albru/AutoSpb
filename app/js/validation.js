@@ -1,7 +1,6 @@
 $(document).ready(function () {
   var msg = "";
   var elements = document.getElementsByTagName("INPUT");
-  console.log(elements);
 
   for (var i = 0; i < elements.length; i++) {
     elements[i].oninvalid = function (e) {

@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       for(let i = 0; i <= num; i++) {
         target.push(arr[i])
       }
+      return target;
     } 
 
     createArr(buttons, desc.length - 1, buttonsArr)

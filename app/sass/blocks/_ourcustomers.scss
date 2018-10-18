@@ -3,7 +3,6 @@
 @import "../misc/mixins";
 @import "../misc/media";
 
-
 .ourcustomers {
   min-height: 650px;
   color: $white;
@@ -27,6 +26,7 @@
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
       background-color: $white;
       margin-top: 50px;
+      margin-bottom: 50px;
       @include tablets {
         margin-top: 10px;
       }
@@ -37,7 +37,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 90;
+    z-index: 10;
     color: $white;
     background-color: lighten($orange, 10%);
     &:focus {

@@ -4,6 +4,7 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="description", content="Подбор автомобилей в Санкт - Петербурге. Оставьте заявку в один клик, и мы найдем для Вас лучший вариант! Опытные эксперты, официальный договор, гарантия 1 месяц! Подбираем авто в спб с 2016 года.")
     meta(name="keywords", content="Подбор авто спб, подбор авто, автоподбор спб, подбор бу авто, подбор авто санкт петербург, автоподбор сайты, автоподбор цена, услуги автоподбора, автоподбор 2018")
     title Пушка Подбор. Подбор авто в спб недорого
     link(rel="shortcut icon", href="img/pushka.png")
@@ -22,6 +23,12 @@ html(lang="ru")
       footer.footer
         include pug/blocks/footer
     include pug/modules/popup
+    include pug/modules/spinner
     script(src="js/libs.min.js") 
     script(src="js/bundle.js")
+    // BEGIN JIVOSITE CODE {literal}
+    script(type='text/javascript').
+      (function(){ var widget_id = 'zLHwArXlbE';var d=document;var w=window;function l(){
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    // {/literal} END JIVOSITE CODE
  

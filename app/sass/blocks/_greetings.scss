@@ -72,6 +72,7 @@
     border-radius: rem(10px);
     @include phones-min {
       margin-bottom: 30px;
+      padding: 15px;
     }
     &-fieldset {
       position: relative;
@@ -80,6 +81,7 @@
       margin-bottom: $margin15;
     }
     &-checkbox {
+      cursor: pointer;
       margin-right: 10px;
       margin-top: 5px;
     }
@@ -95,7 +97,10 @@
     &-lbl {
       white-space: nowrap;
       position: relative;
+      cursor: pointer;
+      transition: all .3s;
       &:after {
+        transition: all .3s;
         position: absolute;
         top: 100%;
         left: 50%;
