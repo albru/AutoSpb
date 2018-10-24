@@ -2,14 +2,45 @@
 html(lang="ru")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Пушка Подбор. Подбор авто в СПб недорого
     meta(name="description", content="Подбор автомобилей в Санкт - Петербурге. Оставьте заявку в один клик, и мы найдем для Вас лучший вариант! Опытные эксперты, официальный договор, гарантия 1 месяц! Подбираем авто в спб с 2016 года.")
     meta(name="keywords", content="Подбор авто спб, подбор авто, автоподбор спб, подбор бу авто, подбор авто санкт петербург, автоподбор сайты, автоподбор цена, услуги автоподбора, автоподбор 2018")
-    title Пушка Подбор. Подбор авто в СПб недорого
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel="shortcut icon", href="img/pushka.png")
     link(rel="stylesheet", href="css/libs.min.css")
     link(rel="stylesheet", href="css/main.css")
+    //- Yandex.Metrika counter
+    script.
+      (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+      try {
+      w.yaCounter50789317 = new Ya.Metrika2({
+      id:50789317,
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true
+      });
+      } catch(e) { }
+      });
+      var n = d.getElementsByTagName("script")[0],
+      s = d.createElement("script"),
+      f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://mc.yandex.ru/metrika/tag.js";
+      if (w.opera == "[object Opera]") {
+      d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+      })(document, window, "yandex_metrika_callbacks2");
+    //- Yandex.Metrika counter
+    //- Global site tag (gtag.js) - Google Analytics
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-127765540-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-127765540-1');
   body.body
     .wrapper
       header.header-wrap
@@ -27,7 +58,7 @@ html(lang="ru")
     script(src="js/libs.min.js") 
     script(src="js/bundle.js")
     // BEGIN JIVOSITE CODE {literal}
-    script(type='text/javascript').
+    script.
       (function(){ var widget_id = 'zLHwArXlbE';var d=document;var w=window;function l(){
       var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
     // {/literal} END JIVOSITE CODE

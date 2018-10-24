@@ -3,6 +3,18 @@
 @import "../misc/mixins";
 @import "../misc/media";
 
+.howitworks-left__new-tech {
+  font-family: $rob;
+  color: $blackTT;
+  & > span {
+    color: $orange;
+  }
+}
+
+.howitworks-left__desc-text {
+ margin-top: 30px;
+}
+
 // JS STYLES BOTTOM
 
 .main-wrap {
@@ -53,6 +65,9 @@
       text-transform: uppercase;
     }
     &__tab {
+      text-transform: uppercase;
+      font-family: $rob;
+      color: $blackTT;
       border-radius: initial;
       background-color: $white;
       position: relative;

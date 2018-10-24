@@ -15,7 +15,7 @@ function submitForm(form, pop) {
           }, 7000);
         })
       });
-    }
+    };
 
     form.submit(function () { //Change
       const th = $(this);
@@ -32,7 +32,7 @@ function submitForm(form, pop) {
       return false;
     });
   });
-}
+};
 
-submitForm(formElem, popupElem)
-submitForm(formElem1, popupElem1)
+submitForm(formElem, popupElem);
+submitForm(formElem1, popupElem1);

@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", function (event) {
   
-  const slider = (function() {
+  (function slider() {
     const left = document.querySelector('.js-slider-left');
     const right = document.querySelector('.js-slider-right');
     const items = document.querySelector('.js-slider-items');
     const slides = Array.from(document.querySelectorAll('.ourcustomers-item'));
     const itemWidth = document.querySelector('.ourcustomers-slider__wrap').offsetWidth;
     const slidesDesc = Array.from(document.querySelectorAll('.slide-desc-JS'));
+    const requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    window.requestAnimationFrame = requestAnimationFrame;
     const minRight = 0;
     let slidesDescCounter = 0;
     let maxRight = itemWidth * 2;
@@ -16,18 +18,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     slides.forEach(item => {
       item.style.width = itemWidth + 'px';
-    })
+    });
 
     let currentRight = 0;
 
     items.style.right = currentRight;
 
-    right.onclick = () => {
+    function moveRight(direction) {
       if (slidesDescCounter < 2) {
         slidesDesc[slidesDescCounter].style.display = 'none';
         slidesDescCounter = slidesDescCounter + 1;
         slidesDesc[slidesDescCounter].style.display = 'initial';
-      }
+      } 
       if (currentRight < maxRight) {
         currentRight += step;
         items.style.right = currentRight + 'px';
@@ -41,8 +43,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
       else {
         return null;
       }
-    }
-    left.onclick = () => {
+    };
+
+    function moveLeft(direction) {
       if (slidesDescCounter > 0) {
         slidesDesc[slidesDescCounter].style.display = 'none';
         slidesDescCounter = slidesDescCounter - 1;
@@ -61,6 +64,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
       else {
         return null;
       }
-    }
+    };
+
+    right.onclick = () => {
+      requestAnimationFrame(moveRight)
+    };
+    left.onclick = () => {
+      requestAnimationFrame(moveLeft)
+    };
   })();
 });

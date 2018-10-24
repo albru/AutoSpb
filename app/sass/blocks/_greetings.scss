@@ -7,6 +7,7 @@
 .title-keywords {
   position: absolute;
   top: -300vh;
+  left: -300vw;
 }
 
 .privacy {
@@ -16,12 +17,11 @@
   &-cont {
     color: $black;
     position: absolute;
-    top: 80%;
+    top: 75%;
     left: 0;
     font-size: rem(10px);
-    opacity: 0;
-    transition: all .3s;
     z-index: 100;
+    display: none;
   }
 }
 
@@ -54,12 +54,15 @@
   &__btn-cont {
     padding: 25px;
     color: $white;
-    opacity: 0;
+    opacity: 1;
     transition: all .3s;
   }
   &__container--left {
     min-height: 100%;
     padding: 45px;
+    position: relative;
+    left: -800px;
+    // animation in btnFadeIn JS
     @include tablets {
       display: none;
     }
@@ -84,6 +87,7 @@
     }
     &-legend {
       margin-bottom: $margin15;
+      font-family: $rob;
     }
     &-checkbox {
       cursor: pointer;

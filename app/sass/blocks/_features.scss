@@ -11,6 +11,9 @@
     margin: $margin15;
     font-family: $rob;
     text-transform: uppercase;
+    &-min {
+      font-family: $rob;
+    }
   }
   &-img--left {
     position: absolute;
@@ -23,6 +26,9 @@
   }
   &-wrapper {
     position: relative;
+    & h3 {
+      font-family: $rob;
+    }
   }
   &-cont {
     background: linear-gradient(90deg, $orange 50%, $black 50%);
@@ -30,10 +36,20 @@
     @include tablets {
       background: linear-gradient(180deg, $orange 50%, $black 50%);
     }
+    @include phones {
+      background: linear-gradient(180deg, $orange 0%, $orange 43%, $black 43%);
+    }
+    @include phones-min {
+      background: linear-gradient(180deg, $orange 0%, $orange 45%, $black 45%);
+    }
+
 
   }
   &-right {
     color: $white;
+    @include phones {
+      margin-top: 15px;
+    }
     &__list {
       border-radius: rem(3px);
       position: relative;
@@ -57,9 +73,6 @@
         }
       }
     }
-    &__cont > h3 {
-      font-weight: bold;
-    }
     &__cont > p {
       @include phones-min {
         margin-bottom: 20px;
@@ -70,6 +83,10 @@
     min-height: 100%;
     position: relative;
     margin-bottom: 50px;
+    @include phones {
+      margin-bottom: 0;
+      margin-top: -10px;
+    }
   }
   &-list {
     width: 100%;

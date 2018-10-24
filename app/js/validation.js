@@ -11,9 +11,9 @@ $(document).ready(function () {
           case 'name1':
             e.target.setCustomValidity("Введите имя"); break;
           case 'phone':
-            e.target.setCustomValidity("Напишите Ваш телефон"); break;
+            e.target.setCustomValidity("Введите телефон"); break;
           case 'phone1':
-            e.target.setCustomValidity("Напишите Ваш телефон"); break;
+            e.target.setCustomValidity("Введите телефон"); break;
           case 'form-check-input':
             e.target.setCustomValidity("Необходимо согласие на обработку"); break;
           case 'form-check-input1':
@@ -25,5 +25,5 @@ $(document).ready(function () {
     elements[i].oninput = function (e) {
       e.target.setCustomValidity(msg);
     };
-  }
-})
+  };
+});
