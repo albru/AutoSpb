@@ -4,7 +4,7 @@
     .col-lg-6.header-second__container--left
       .row
         .col-lg-3.offset-md-6.header-second__btn-cont
-          a.btn.header-second__btn Экономия до 50 тыс. рублей
+          a.btn.header-second__btn Экономия времени и денег
       .row
         .col-lg-3.offset-md-4.header-second__btn-cont
           a.btn.header-second__btn Бесплатные консультации
@@ -44,9 +44,11 @@
                 span.header-second__form-checklbl Я прочитал и согласен с 
                 span.header-second__form-privacy обработкой данных
               .form-group.col-xl-12.d-flex.justify-content-center.align-items-baseline.popup__DoneJS1
-                i(class="icon-ok", style="color: green;")
-                span Спасибо! Мы свяжемся с Вами в ближайшее время.
-                //- styles in greetings.scss
-                //- js code in buttons.js
+                .popup__success 
+                  i(class="icon-ok", style="color: #6ca;")
+                  span Спасибо! Мы свяжемся с Вами в ближайшее время.
+                  //- styles in popup.scss
+                  //- js code in buttons.js
               .privacy-cont
                 p.privacy Настоящим вы выражаете свое согласие для использования продавцом или уполномоченным лицом продавца ваших персональных данных, в том числе путем осуществления автоматизированного анализа персональных данных, а также на их передачу различными способами, без ограничения срока действия. В соответствии с п. 5 ст. 21 ФЗ «О персональных данных» настоящее согласие может быть отозвано только при условии письменного уведомления на почту не менее чем за 5 календарных дней до предполагаемой даты прекращения использования персональных данных .
+              include ../modules/spinner-ring 

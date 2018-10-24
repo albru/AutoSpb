@@ -5,6 +5,12 @@ $tablets: 992px;
 $phones: 768px;
 $phones-min: 576px;
 
+@mixin desktop {
+  @media screen and (min-width: $laptop) {
+    @content;
+  }
+}
+
 @mixin laptop {
   @media screen and (max-width: $laptop) {
     @content;
