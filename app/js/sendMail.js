@@ -19,14 +19,14 @@ function submitForm(form, pop, loadingAnimationNumber) {
       });
     };
 
-    form.submit(function (e) { //Change
+    form.submit(function (e) {
       e.preventDefault();
       loadingAnimation[loadingAnimationNumber].style.opacity = 1;
       loadingAnimation[loadingAnimationNumber].style.display = 'inline-block';
       const th = $(this);
       $.ajax({
         type: "POST",
-        url: "server.php", //Change
+        url: "server.php",
         data: th.serialize()
       }).done(function () {
         loadingAnimation[loadingAnimationNumber].style.opacity = 0;

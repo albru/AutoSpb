@@ -23,11 +23,8 @@ window.onload = () => {
     };
     spinnerFadeOut()
   })();
-
   (function greetingsBtnAnimation() {
-    const requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-    window.requestAnimationFrame = requestAnimationFrame;
     const btnCont = document.querySelector('.header-second__container--left');
-    btnCont.style.display = 'initial';
+    btnCont.style.left = 0 + 'px';
   })();
 };
