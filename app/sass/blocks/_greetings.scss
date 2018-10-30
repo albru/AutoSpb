@@ -61,10 +61,12 @@
     transition: all .3s;
   }
   &__container--left {
+    display: none;
     min-height: 100%;
     padding: 45px;
     position: relative;
-    left: -800px;
+    transition: all 1s;
+    animation: btnsShow .7s ease-in-out;
     // animation in btnFadeIn JS
     @include tablets {
       display: none;

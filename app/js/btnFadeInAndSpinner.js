@@ -28,15 +28,6 @@ window.onload = () => {
     const requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
     window.requestAnimationFrame = requestAnimationFrame;
     const btnCont = document.querySelector('.header-second__container--left');
-    function startAnimate(){
-      btnCont.animate([
-      { transform: "translateX(800px)"}
-    ], {
-      duration: 600,
-      easing: "ease-in-out",
-      fill: "forwards"
-    });
-  };
-    requestAnimationFrame(startAnimate)
+    btnCont.style.display = 'initial';
   })();
 };
