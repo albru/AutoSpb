@@ -3,10 +3,10 @@ const popupElem = $('.popup__DoneJS');
 const formElem = $("#submit-form");
 const popupElem1 = $('.popup__DoneJS1');
 const formElem1 = $("#submit-form1");
-const speedometer = $('.gauge-loader-cont');
-let speedometerNumber = 0;
+const loadingAnimation = $('.loader');
+let loadingAnimationNumber = 0;
 
-function submitForm(form, pop, speedometerNumber) {
+function submitForm(form, pop, loadingAnimationNumber) {
   $(document).ready(function () {
     const popup = pop;
     const popupFunc = function () {
@@ -21,16 +21,16 @@ function submitForm(form, pop, speedometerNumber) {
 
     form.submit(function (e) { //Change
       e.preventDefault();
-      speedometer[speedometerNumber].style.opacity = 1;
-      speedometer[speedometerNumber].style.display = 'initial';
+      loadingAnimation[loadingAnimationNumber].style.opacity = 1;
+      loadingAnimation[loadingAnimationNumber].style.display = 'inline-block';
       const th = $(this);
       $.ajax({
         type: "POST",
         url: "server.php", //Change
         data: th.serialize()
       }).done(function () {
-        speedometer[speedometerNumber].style.opacity = 0;
-        speedometer[speedometerNumber].style.display = 'none';
+        loadingAnimation[loadingAnimationNumber].style.opacity = 0;
+        loadingAnimation[loadingAnimationNumber].style.display = 'none';
         popupFunc();
         setTimeout(function () {
           th.trigger("reset");

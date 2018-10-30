@@ -7,7 +7,7 @@ BODY_BEFORE_START('hidden');
 window.onload = () => {
   BODY_BEFORE_START('initial');
   const hideSpinner = (function name() {
-    const spinner = document.querySelector('.spinner');
+    const spinner = document.querySelector('.speedometer');
     const spinnerBg = document.querySelector('.spinner-bg');
     function spinnerFadeOut() {
       const spinnerAnimate = new Promise(function (resolve) {
