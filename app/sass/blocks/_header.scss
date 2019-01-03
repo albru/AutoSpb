@@ -3,6 +3,23 @@
 @import "../misc/mixins";
 @import "../misc/variables";
 
+.logo1, 
+.logo2 {
+  font-family: 'russo', Helvetica, sans-serif;
+  font-size: $logo_big;
+  @include laptop {
+    font-size: $logo_med;
+  }
+  @include tablets {
+    font-size: $logo_small;
+  }
+}
+.logo1 {
+  color: $white;
+}
+.logo2 {
+  color: $orange;
+}
 // JS position condition in scroll.js
 
 .header-wrap {
@@ -57,9 +74,6 @@
     @include phones {
       align-items: center;
       justify-content: center!important;
-    }
-    @include phones-min {
-      margin-top: 10px;
     }
     &:after {
       content:'';

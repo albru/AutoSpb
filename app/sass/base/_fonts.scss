@@ -1,21 +1,22 @@
 @font-face {
     font-family: 'russo';
+    font-display: auto;
     src: url('../fonts/RussoOne-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
     font-family: 'firaR';
+    font-display: auto;
     src: url('../fonts/FiraSansCondensed-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
   font-family: 'fontello';
+  font-display: auto; 
   src: url('../fonts/fontello.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
